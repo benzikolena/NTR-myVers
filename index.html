@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganeisodos</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Steganeisodos, i.e Authentication Interface Concealment (AIC)</h1>
+
+    <h2>Introduction <span class="icon-triangle"></span></h2>
+
+    <div id="intro" class="collapsible active">
+        <p>
+            This project examines the concept of concealing the authentication interface on websites. 
+            The terms <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">Security through Obscurity</a> or 
+            <a target=_blank href="https://www.google.com/search?q=Stegano+Authentication&sca_esv=f7156635f6e9a261&rlz=1C1OKWM_enUA979UA979&sxsrf=AE3TifMGyJG6Sn-e8b-BllTNkfMVzxkZXw%3A1752065738314&ei=ymZuaNf9EvmgwPAP_sun8QE&ved=0ahUKEwjXitK_6a-OAxV5EBAIHf7lKR4Q4dUDCBA&uact=5&oq=Steganoauthentication&gs_lp=Egxnd3Mtd2l6LXNlcnAiFVN0ZWdhbm9hdXRoZW50aWNhdGlvbjILEAAYgAQYsAMYogQyCxAAGIAEGLADGKIESLwJUABYAHAAeACQAQCYAVWgAVWqAQExuAEDyAEAmAIBoAJYmAMA4gMFEgExIECIBgGQBgKSBwExoAfEAbIHATG4B1jCBwMyLTHIBwM&sclient=gws-wiz-serp">
+            Steganoauthentication</a> could potentially be considered for this purpose; 
+            however, both terms already have established meanings that differ from our concept. 
+            Our focus, however, is on <span class="term">Steganeisodos</span> (from the Greek Steganós, meaning "hidden," and Eísodos, meaning "access" or "entry"), 
+            which we will also refer to as <span class="term">Authentication Interface Concealment (AIC)</span>.
+        </p>
+
+        <div class="def">
+            <p>
+                <strong>Steganeisodos</strong> synonymous with <strong>Authentication Interface Concealment (AIC)</strong>, 
+                is a security design methodology that utilizes a hidden, undocumented mechanism as its core. This mechanism is accessed via an entry point that can either be a publicly visible interface &ndash; whose apparent function is standard authentication &ndash; or a completely non-obvious interaction point. Access is granted upon activation by a specific, predefined trigger condition (such as entering a secret password or performing a sequence of actions), unlocking a concealed area or functionality of the system.
+            </p>
+        </div>
+    </div>
+
+
+    <h2 id="s">NTR strategy</h2>	
+
+    <h3>Collecting experimental data</h3>
+        <p>
+            <span class="icon-placeholder">&#9000;</span> 
+            At this stage, you need to choose a password and enter it at least 10 times in a row at your <span class="term">natural typing rhythm (NTR)</span>.<br>	
+            <strong><a href="">Ready? Click to Start!</a></strong>
+        </p>
+    <div id="main" class="inactive-section">
+        <h3>Reviewing the Collected Data</h3>
+            <p>
+                <span class="icon-placeholder">&#128202;&#xFE0E;</span> 
+                You can view the statistical data by following <strong><a href="">this link</a></strong>.<br> 
+                This step is only available once the statistical data has been collected.
+            </p>
+        <h3>Verification</h3>  
+            <p>
+                <span class="icon-placeholder">&#9919;</span>
+                Here comes the exciting part! It's time to see if the system can recognize your typing. 
+                Ready to start? <strong><a href="">Click here to begin</a></strong>.<br>
+                This step is also only available once the statistical data has been collected.
+            </p>
+        <h3>Reset Data</h3>
+            <p>
+                <span class="icon-placeholder">&#8634;</span> 
+                Should you wish to begin the process again, please select 
+                <strong><a href="#" ronclick=";" onmouseover="this.style.color='red';" onmouseout="this.style.color='';">this link</a></strong>.<br>
+                Be advised that this action will permanently delete all data you have previously entered.
+            </p>
+    </div>
+
+    <p style="margin-bottom: 100px; background-color: #ccc;"></p>
+
+    <div id="footer-placeholder">
+        
+        
+    </div>
+    <script>
+        const placeholder = document.querySelector("#footer-placeholder");
+
+        async function addFooter() {
+            try {
+                const response = await fetch("footer.html");
+            
+                if (!response.ok) {
+                    console.log("response error");
+                    placeholder.innerHTML = `ERROR: ${response.status}`;
+                }
+                else {
+                    const htmlTxt = await response.text();
+                    placeholder.innerHTML = htmlTxt
+                }
+            }
+            catch(error) {
+                console.log("some error is catched");
+                throw(error);
+            }
+            
+
+        }
+
+        addFooter();
+
+        
+        
+
+    </script>
+    
+</body>
+</html>
