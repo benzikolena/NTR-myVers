@@ -6,12 +6,16 @@
     <title>Steganeisodos</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./functions.js"></script>
+
+    <!--
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png" >
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    -->
 </head>
 <body>
+    <!-- <div style="flex: 1 1 0%; padding: 2rem;"></div> should be added by function additionally-->
     <h1>Steganeisodos, i.e Authentication Interface Concealment (AIC)</h1>
 
     <h2>Introduction <span class="icon-triangle"></span></h2>
@@ -44,7 +48,7 @@
             At this stage, you need to choose a password and enter it at least 10 times in a row at your <span class="term">natural typing rhythm (NTR)</span>.<br>	
             <strong><a href="./collectData.html">Ready? Click to Start!</a></strong>
         </p>
-    <div id="main" class="inactive-section">
+    <div id="main_part" class="inactive-section">
         <h3>Reviewing the Collected Data</h3>
             <p>
                 <span class="icon-placeholder">&#128202;&#xFE0E;</span> 
@@ -69,10 +73,9 @@
 
     <p style="margin-bottom: 100px; background-color: #ccc;"></p>
 
-    <div id="footer-placeholder">
-        
-        
-    </div>
+    <div id="footer-placeholder"></div>
+
+    
     <script>
         const footerLocal = () => {
             return `
@@ -115,6 +118,12 @@
         }
 
         addFooter();
+
+        window.onload = () => {
+            rotateTringleIcon();
+        }
+
+        
 
         
         
