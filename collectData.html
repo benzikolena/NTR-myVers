@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting data</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png" >
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png"> 
+    -->
+
+</head>
+<body>
+    <a href="./index.html" class="back-to-home-link"> ← Return to main page</a>
+    <div id="main_collect">
+        <h3>Collecting experimental data</h3>
+        <div id="input_type" class="centering inactive-section">
+            Set your desired password in this field  &nbsp;
+            <input id="myPass" type="text" placeholder="at least 3 chars">&nbsp;&nbsp;
+            <input type="submit" value="OK" onclick="start()">
+        </div>
+        <div id="input_verify" class="centering">
+            <p>
+                Simply start typing your password on the keyboard. You can do this multiple times.
+                Pauses between words do not matter, but maintain a consistent typing pattern for each word.
+            </p>
+            <div class="info-container">
+                <div id="info"    class="info" style="width: 60%"></div>
+		        <div id="counter" class="info" style="width: 50pt"></div>
+            </div>
+            <div id="myTable"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

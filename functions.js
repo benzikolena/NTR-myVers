@@ -1,3 +1,10 @@
+var rotateTringleIcon = () => {
+	const icon_triangle = document.querySelector(".icon-triangle");
+	icon_triangle.addEventListener("click", () => {
+		icon_triangle.classList.toggle("active");
+	})
+};
+
 const algo_name = "dispersio approach";  
 
 function checker(stats, arr){
@@ -13,3 +20,4 @@ function checker(stats, arr){
   	}
   	return (counter/columns * 100 > p) ? false : true;
 };
+
